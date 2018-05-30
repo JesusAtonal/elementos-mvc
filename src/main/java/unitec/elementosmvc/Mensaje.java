@@ -28,6 +28,11 @@ public class Mensaje {
     }
     private String cuerpo;
 
+    @Override
+    public String toString() {
+        return "Mensaje{" + "id=" + id + ", fecha=" + fecha + ", cuerpo=" + cuerpo + '}';
+    }
+
     Mensaje(LocalDate fecha, String mi_primer_mensaje) {
     }
 
@@ -48,6 +53,12 @@ public class Mensaje {
     }
 
     public Mensaje() {
+    }
+
+    public Mensaje(String id, LocalDate fecha, String cuerpo) {
+        this.id = id;
+        this.fecha = fecha;
+        this.cuerpo = cuerpo;
     }
 
     public LocalDate getFecha() {
